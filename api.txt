@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "lab_four_api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/users"
+      }
+    },
+    {
+      "name": "Get One User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/users/1"
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"user\": {\"name\": \"Alice\", \"email\": \"alice@example.com\"}}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "http://localhost:3000/users"
+      }
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"user\": {\"name\": \"Alice Updated\", \"email\": \"alice_updated@example.com\"}}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "http://localhost:3000/users/1"
+      }
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:3000/users/1"
+      }
+    },
+    {
+      "name": "Get All Posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/posts"
+      }
+    },
+    {
+      "name": "Get One Post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/posts/1"
+      }
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"post\": {\"title\": \"First Post\", \"body\": \"Hello World\", \"user_id\": 1}}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "http://localhost:3000/posts"
+      }
+    },
+    {
+      "name": "Update Post",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"post\": {\"title\": \"Updated Post\", \"body\": \"Updated content\", \"user_id\": 1}}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "http://localhost:3000/posts/1"
+      }
+    },
+    {
+      "name": "Delete Post",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:3000/posts/1"
+      }
+    }
+  ]
+}
